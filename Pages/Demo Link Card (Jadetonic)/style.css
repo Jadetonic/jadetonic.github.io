@@ -1,0 +1,229 @@
+:root {
+  --color-card-background: #1e1623;
+  --color-text-bright: white;
+  --color-text-neutral: #e5bc94;
+  --color-accent: red;
+  --color-accent-2: maroon;
+  --image-background: url(./jade_banner.png);
+  --font-unica: "Unica One", sans-serif;
+  --font-raj: "Rajdhani", sans-serif;
+  --font-h1-size: 2.5rem;
+  /*font-family: "Rajdhani", sans-serif;
+      font-weight: 300 -4-5-6-700*/
+  /*font-family: "Unica One", sans-serif;
+    font-weight: 400;*/
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  min-height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: var(--image-background);
+  background-position: 20% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: maroon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 5vh;
+  padding: 3em;
+  background-color: var(--color-card-background);
+  border-radius: 1em;
+  font-family: var(--font-raj);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text-neutral);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.3em 0.5em black;
+}
+
+.pfp {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5em 0.3em black;
+}
+
+.title {
+  display: inline-block;
+  font-size: var(--font-h1-size);
+  font-family: var(--font-unica);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text-bright);
+  vertical-align: baseline;
+}
+.title b {
+  font-size: 3.75rem;
+  vertical-align: sub;
+}
+
+.subtitle {
+  font-size: calc(var(--font-h1-size) * 0.3);
+  font-family: var(--font-raj);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.25em;
+  translate: 0 -0.75em;
+}
+
+.link-container {
+  margin: 1em 0 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.icon {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  margin: 0.25em;
+  font-size: 1.5rem;
+  background-color: maroon;
+  border: 0 solid transparent;
+  border-radius: 50%;
+  box-shadow: inset 0.1em 0.1em 0.3em rgba(255, 0, 0, 0.5),
+    0 0 0.3em 0.1em black;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+
+  transition: transform 0.5s ease, background-color 0.25s ease-out;
+}
+.icon.a {
+  background-image: url(./twitter.png);
+}
+.icon.b {
+  background-image: url(./twitch.png);
+}
+.icon.c {
+  background-image: url(./youtube.png);
+}
+
+@media (orientation: landscape) {
+  .icon:hover {
+    background-color: crimson;
+    transform: scale(1.1) rotate(0deg);
+    transition: transform 0.5s ease, background-color 0.25s ease-out;
+  }
+}
+
+.large-button {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--color-text-bright);
+  text-align: center;
+  letter-spacing: 0.1em;
+  background-color: black;
+  border: 0 solid transparent;
+  border-radius: 0.5em;
+  box-shadow: inset 0.1em 0.1em 0.3em rgba(255, 0, 0, 0.5),
+    0 0 0.3em 0.1em black;
+  padding: 0.05em;
+  margin: 0.1em;
+  width: 9.5em;
+  height: 2em;
+  opacity: 30%;
+}
+
+.email {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 50%;
+  margin: 1em 0 0 0;
+}
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: maroon;
+  transition: opacity 0.75s ease-out, visibility 0.75s ease-out,
+    scale 0.75s ease;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  scale: 1.1;
+}
+
+.loader::after {
+  content: "";
+  background-image: url(./JT_Pixel_Art.png);
+  background-size: cover;
+  opacity: 100%;
+  width: clamp(0px, 50vw, 50vh);
+  height: clamp(0px, 50vh, 50vw);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  animation: loading 0.75s ease-out alternate infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes button-push {
+  0% {
+  }
+  25% {
+    box-shadow: 0 0 0.3em white;
+    transform: scale(1.1) rotate(360deg);
+    background-color: crimson;
+  }
+  75% {
+    box-shadow: 0 0 0.3em white;
+    transform: scale(1.1) rotate(360deg);
+    background-color: crimson;
+  }
+  100% {
+  }
+}

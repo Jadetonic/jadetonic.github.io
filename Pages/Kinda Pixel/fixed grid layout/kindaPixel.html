@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>title</title>
+	<link rel="stylesheet" href="beaDefault.css">
+	<link rel="stylesheet" href="kindaPixel.css">
+</head>
+
+<body>
+	<div class="menus fill">
+		<div class="top">
+			
+		</div>
+		<div class="middle">
+			<div class="canvasContainer">
+				<canvas id="myCanvas" class="myCanvas"
+				width="600px" height="600px">
+					</canvas>
+		</div>
+		</div>
+		<div class="bottom">
+			<button id="centerButton">Center Canvas</button>
+			<div class="slidecontainer">
+  			<input id="range" type="range" min="0" max="3" value="1" step="0.1">
+			</div>
+			<p id="coords"></p>
+			<p>Value: <output id="printRange"></output></p>
+		</div>
+		
+		<div style="display: none">
+			<img src="./brush.png" id="img" width="30" height="30" />
+		</div>
+	</div>
+	<script type="module" src="./kindaPixel.js"></script>
+</body>
+</html>
