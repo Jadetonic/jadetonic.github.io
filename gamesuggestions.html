@@ -9,17 +9,13 @@
       margin: 0;
     }
     #google-form-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin: 10% auto; /* Center the container vertically and horizontally */
     }
     #google-form-container iframe {
       width: 90%; /* Adjusted width for smaller screens */
       max-width: 800px; /* Maximum width for larger screens */
-      height: 100vh; /* Full viewport height */
+      height: auto; /* Allow the iframe to adjust its height based on content */
       border: none;
-      overflow: hidden; /* Hide any potential scrollbars */
     }
     .loader {
       /* Your loader styles here */
