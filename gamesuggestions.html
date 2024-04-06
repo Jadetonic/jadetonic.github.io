@@ -45,8 +45,8 @@
       overflow: hidden;
     }
     #google-form-container iframe {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       border: none;
     }
   </style>
@@ -59,11 +59,17 @@
     <div class="filter"></div>
     <div class="loader"></div>
     <!-- Google Form iframe -->
-    <div id="google-form-container">
+    <div id="google-form-container" style="display:none;">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
     </div>
     <!-- End of Google Form iframe -->
   </div>
   <script src="./script.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      document.querySelector('.loader').style.display = 'none';
+      document.querySelector('#google-form-container').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
