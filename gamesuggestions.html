@@ -7,16 +7,17 @@
     body, html {
       height: 100%;
       margin: 0;
+      overflow: hidden;
     }
     #google-form-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     #google-form-container iframe {
-      width: 100%; /* Set iframe width to 100% */
-      height: 100%; /* Allow the iframe to adjust its height based on content */
+      width: 640px; /* Set the width of the Google Form */
+      height: 1250px; /* Adjust the height to display the entire Google Form without scrolling */
       border: none;
     }
     .loader {
@@ -28,11 +29,12 @@
   <title>Jadetonic</title>
 </head>
 <body>
+  <div class="filter"></div>
   <!-- Loader -->
   <div class="loader"></div>
   <!-- Google Form iframe -->
   <div id="google-form-container">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen scrolling="no"></iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
   </div>
   <!-- End of Google Form iframe -->
   <script src="./script.js"></script>
