@@ -7,17 +7,17 @@
     body, html {
       height: 100%;
       margin: 0;
-      overflow: hidden;
     }
     #google-form-container {
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
     #google-form-container iframe {
-      width: 640px; /* Set the width of the Google Form */
-      height: 1250px; /* Adjust the height to display the entire Google Form without scrolling */
+      width: 90%; /* Adjusted width for smaller screens */
+      max-width: 640px; /* Maximum width for larger screens */
+      height: 100vh; /* Full viewport height */
       border: none;
       overflow: hidden; /* Hide any potential scrollbars */
     }
@@ -30,7 +30,6 @@
   <title>Jadetonic</title>
 </head>
 <body>
-  <div class="filter"></div>
   <!-- Loader -->
   <div class="loader"></div>
   <!-- Google Form iframe -->
