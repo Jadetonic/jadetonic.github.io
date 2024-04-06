@@ -3,6 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+    #google-form-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #google-form-container iframe {
+      width: 80%;
+      height: 80%;
+      border: none;
+    }
+  </style>
   <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet" />
   <link href="./style.css" rel="stylesheet" />
   <title>Jadetonic</title>
@@ -10,6 +28,11 @@
 <body>
   <div class="filter"></div>
   <div class="loader"></div>
+  <!-- Google Form iframe -->
+  <div id="google-form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <!-- End of Google Form iframe -->
   <script src="./script.js"></script>
 </body>
 </html>
