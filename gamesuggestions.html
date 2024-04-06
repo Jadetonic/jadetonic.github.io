@@ -7,46 +7,17 @@
     body, html {
       height: 100%;
       margin: 0;
+      overflow: hidden;
     }
-    .container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .filter {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
-    }
-    .loader {
-      position: absolute;
+    #google-form-container {
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 2;
-      /* Your loader styles here */
-    }
-    #google-form-container {
-      position: relative;
-      max-width: 800px; /* Adjust maximum width as needed */
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
     }
     #google-form-container iframe {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
       border: none;
     }
   </style>
@@ -55,21 +26,13 @@
   <title>Jadetonic</title>
 </head>
 <body>
-  <div class="container">
-    <div class="filter"></div>
-    <div class="loader"></div>
-    <!-- Google Form iframe -->
-    <div id="google-form-container" style="display:none;">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <!-- End of Google Form iframe -->
+  <div class="filter"></div>
+  <div class="loader"></div>
+  <!-- Google Form iframe -->
+  <div id="google-form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
   </div>
+  <!-- End of Google Form iframe -->
   <script src="./script.js"></script>
-  <script>
-    window.addEventListener('load', function() {
-      document.querySelector('.loader').style.display = 'none';
-      document.querySelector('#google-form-container').style.display = 'block';
-    });
-  </script>
 </body>
 </html>
