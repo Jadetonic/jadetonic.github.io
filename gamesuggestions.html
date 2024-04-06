@@ -16,10 +16,13 @@
       transform: translate(-50%, -50%);
     }
     #google-form-container iframe {
-      width: 600px; /* Set your desired width */
-      height: 800px; /* Set your desired height */
+      width: 640px; /* Set the width of the Google Form */
+      height: 1050px; /* Set the height of the Google Form */
       border: none;
       overflow: hidden; /* Hide any potential scrollbars */
+    }
+    .loader {
+      /* Your loader styles here */
     }
   </style>
   <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet" />
@@ -28,6 +31,7 @@
 </head>
 <body>
   <div class="filter"></div>
+  <!-- Loader -->
   <div class="loader"></div>
   <!-- Google Form iframe -->
   <div id="google-form-container">
