@@ -16,7 +16,7 @@
     }
     #google-form-container iframe {
       width: 90%; /* Adjusted width for smaller screens */
-      max-width: 640px; /* Maximum width for larger screens */
+      max-width: 800px; /* Maximum width for larger screens */
       height: 100vh; /* Full viewport height */
       border: none;
       overflow: hidden; /* Hide any potential scrollbars */
@@ -26,9 +26,9 @@
     }
 
     /* Media Query for desktop */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       #google-form-container iframe {
-        width: 70%; /* Adjusted width for desktop screens */
+        width: 70%; /* Adjusted width for larger desktop screens */
       }
     }
   </style>
@@ -41,7 +41,7 @@
   <div class="loader"></div>
   <!-- Google Form iframe -->
   <div id="google-form-container">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen scrolling="no"></iframe>
   </div>
   <!-- End of Google Form iframe -->
   <script src="./script.js"></script>
