@@ -9,23 +9,19 @@
       margin: 0;
     }
     #google-form-container {
-      margin: 10% auto; /* Center the container vertically and horizontally */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
     #google-form-container iframe {
-      width: 90%; /* Adjusted width for smaller screens */
-      max-width: 800px; /* Maximum width for larger screens */
-      height: auto; /* Allow the iframe to adjust its height based on content */
+      width: auto; /* Allow the iframe to adjust its width based on content */
+      max-width: 100%; /* Limit maximum width to avoid overflow */
+      height: 100%; /* Allow the iframe to adjust its height based on content */
       border: none;
     }
     .loader {
       /* Your loader styles here */
-    }
-
-    /* Media Query for desktop */
-    @media screen and (min-width: 1024px) {
-      #google-form-container iframe {
-        width: 70%; /* Adjusted width for larger desktop screens */
-      }
     }
   </style>
   <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet" />
