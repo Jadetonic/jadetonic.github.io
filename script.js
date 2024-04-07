@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 250);
 });
 
+window.addEventListener('load', function() {
+      var iframe = document.querySelector('#google-form-container iframe');
+      iframe.onload = function() {
+        document.querySelector('.loader').classList.add('loader-hidden'); // Hide the loader once the iframe has finished loading
+        document.getElementById('google-form-container').style.display = 'block'; // Show the Google Form container
+      };
+    });
 
 //***blur background on card hover***
 
