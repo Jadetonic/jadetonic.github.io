@@ -15,7 +15,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1; /* Ensure the Google Form is behind the loader */
-      display: none; /* Hide the Google Form initially */
     }
     #google-form-container iframe {
       width: 640px; /* Set the width of the Google Form */
@@ -28,11 +27,6 @@
       top: calc(50% - 20px); /* Adjust loader position */
       left: calc(50% - 20px); /* Adjust loader position */
       z-index: 9999; /* Ensure the loader stays on top */
-      transition: opacity 0.5s; /* Add transition for smoother appearance/disappearance */
-      opacity: 1; /* Initially visible */
-    }
-    .loader.loader-hidden {
-      opacity: 0; /* Hidden when loader-hidden class is added */
     }
 
     /* Media Query for iPhone */
@@ -56,15 +50,16 @@
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
   </div>
   <!-- End of Google Form iframe -->
-  <script src="script.js"></script> <!-- Include the script.js file -->
   <script>
     window.addEventListener('load', function() {
-      var iframe = document.querySelector('#google-form-container iframe');
+      var iframe = document.getElementById('google-form-iframe');
       iframe.onload = function() {
-        document.querySelector('.loader').classList.add('loader-hidden'); // Hide the loader once the iframe has finished loading
-        document.getElementById('google-form-container').style.display = 'block'; // Show the Google Form container
+        document.getElementById('google-form-container').style.visibility = 'visible'; // Show the Google Form once it's fully loaded
       };
     });
+  </script>
+  <script>
+  <script src="script.js"></script>
   </script>
 </body>
 </html>
