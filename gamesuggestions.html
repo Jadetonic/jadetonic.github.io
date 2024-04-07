@@ -15,7 +15,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1; /* Ensure the Google Form is behind the loader */
-      visibility: hidden; /* Hide the Google Form initially */
+      display: none; /* Hide the Google Form initially */
     }
     #google-form-container iframe {
       width: 640px; /* Set the width of the Google Form */
@@ -62,7 +62,7 @@
       var iframe = document.querySelector('#google-form-container iframe');
       iframe.onload = function() {
         document.querySelector('.loader').classList.add('loader-hidden'); // Hide the loader once the iframe has finished loading
-        document.getElementById('google-form-container').style.visibility = 'visible'; // Show the Google Form container
+        document.getElementById('google-form-container').style.display = 'block'; // Show the Google Form container
       };
     });
   </script>
