@@ -50,6 +50,13 @@
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
   </div>
   <!-- End of Google Form iframe -->
-  <script src="./script.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      var iframe = document.getElementById('google-form-iframe');
+      iframe.onload = function() {
+        document.getElementById('google-form-container').style.visibility = 'visible'; // Show the Google Form once it's fully loaded
+      };
+    });
+  </script>
 </body>
 </html>
