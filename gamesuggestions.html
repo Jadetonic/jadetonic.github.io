@@ -14,7 +14,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 1; /* Ensure the Google Form is behind the loader */
+            z-index: 1; /* Ensure the Google Form is behind the loader */
     }
     #google-form-container iframe {
       width: 640px; /* Set the width of the Google Form */
@@ -50,16 +50,6 @@
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4G-ZjlPltON6ytTBh-cp2oMnLxfyXrX8uFDfVBNsFxLRkNw/viewform" frameborder="0" allowfullscreen></iframe>
   </div>
   <!-- End of Google Form iframe -->
-  <script>
-    window.addEventListener('load', function() {
-      var iframe = document.getElementById('google-form-iframe');
-      iframe.onload = function() {
-        document.getElementById('google-form-container').style.visibility = 'visible'; // Show the Google Form once it's fully loaded
-      };
-    });
-  </script>
-  <script>
-  <script src="script.js"></script>
-  </script>
+  <script src="./script.js"></script>
 </body>
 </html>
