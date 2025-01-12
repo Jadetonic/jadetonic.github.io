@@ -1,0 +1,201 @@
+:root {
+  /* Color Palette */
+  --color-card-background: #1e1623;
+  --color-text-bright: white;
+  --color-text-neutral: #e5bc94;
+  --color-accent: red;
+  --color-accent-2: maroon;
+  
+  /* Images */
+  --image-background: url(https://yt3.googleusercontent.com/Qq3BKckOorXma3b5V4vPVexhQqknh1xAwLE0dLjVH_DgVwbdM4DzNEU1MkAU7gWz095z9xBi=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj);
+  
+  /* Fonts */
+  --font-unica: "Unica One", sans-serif;
+  --font-raj: "Rajdhani", sans-serif;
+  --font-h1-size: 2.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: var(--image-background);
+  background-color: maroon;
+  background-position: 20% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 5vh;
+  padding: 3em;
+  background-color: var(--color-card-background);
+  border-radius: 6em;
+  font-family: var(--font-raj);
+  font-weight: 400;
+  color: var(--color-text-neutral);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.3em 0.5em black;
+}
+
+.pfp {
+  width: 25%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5em 0.3em black;
+}
+
+.title {
+  display: inline-block;
+  font-size: var(--font-h1-size);
+  font-family: var(--font-unica);
+  font-weight: 400;
+  color: var(--color-text-bright);
+}
+
+.title b {
+  font-size: 3.75rem;
+  vertical-align: sub;
+}
+
+
+.subtitle {
+  font-size: calc(var(--font-h1-size) * 0.3);
+  font-family: var(--font-raj);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  translate: 0 -0.75em;
+}
+.discord-container {
+  position: relative; /* Needed for positioning the sub count */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centers the sub count with the button */
+  justify-content: center;
+}
+.discord-text {
+  margin-top: 0; /* Minimal margin to ensure it stays close */
+  position: absolute; /* Place the element in a specific position */
+  font-size: .8rem; /* Slightly smaller font size */
+  font-weight: 600; /* Bold text */
+  color: var(--color-text-bright); /* Match bright text color */
+  top: 8.4em; /* Adjust vertical position */
+  opacity: 0.85; /* Subtle visibility */
+  text-align: center; /* Center-align text */
+}
+.membersCount {
+  margin-top: 0; /* Minimal margin to ensure it stays close */
+  position: absolute; /* Place the element in a specific position */
+  font-size: 1.2rem; /* Slightly smaller font size */
+  font-weight: 600; /* Bold text */
+  color: var(--color-text-bright); /* Match bright text color */
+  top: 4.4em; /* Adjust vertical position */
+  opacity: 0.85; /* Subtle visibility */
+  text-align: center; /* Center-align text */
+}
+.youtube-container {
+  position: relative; /* Needed for positioning the sub count */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centers the sub count with the button */
+  justify-content: center;
+}
+.subscriber-text {
+  margin-top: 0; /* Minimal margin to ensure it stays close */
+  position: absolute; /* Place the element in a specific position */
+  font-size: .8rem; /* Slightly smaller font size */
+  font-weight: 600; /* Bold text */
+  color: var(--color-text-bright); /* Match bright text color */
+  top: 8.4em; /* Adjust vertical position */
+  opacity: 0.85; /* Subtle visibility */
+  text-align: center; /* Center-align text */
+}
+.estimatedSubCount {
+  margin-top: 0; /* Minimal margin to ensure it stays close */
+  position: absolute; /* Place the element in a specific position */
+  font-size: 1.2rem; /* Slightly smaller font size */
+  font-weight: 600; /* Bold text */
+  color: var(--color-text-bright); /* Match bright text color */
+  top: 4.4em; /* Adjust vertical position */
+  opacity: 0.85; /* Subtle visibility */
+  text-align: center; /* Center-align text */
+}
+.link-container {
+  margin: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative; /* Allows absolute positioning within this container */
+}
+.icon {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  margin: 0.25em;
+  font-size: 1.5rem;
+  background-color: maroon;
+  border-radius: 50%;
+  box-shadow: inset 0.1em 0.1em 0.3em rgba(255, 0, 0, 0.5), 0 0 0.3em 0.1em black;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease, background-color 0.25s ease-out;
+}
+
+.icon.a { background-image: url(./bluesky.png); }
+.icon.b { background-image: url(./twitch.png); }
+.icon.c { background-image: url(./youtube.png); }
+.icon.d { background-image: url(./discord.png); }
+
+@media (orientation: landscape) {
+  .icon:hover {
+    background-color: #bb2233;
+    transform: scale(1.1);
+  }
+}
+
+.email {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  margin: 1em 0 0 0;
+}
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+@keyframes button-push {
+  25%, 75% {
+    box-shadow: 0 0 0.3em #d47528;
+    transform: scale(1.1) rotate(360deg);
+  }
+}
