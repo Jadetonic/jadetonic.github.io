@@ -25,12 +25,13 @@ async function get_subscriber_count() {
 
 // Fetch Discord member count
 async function get_member_count() {
-    const url = "https://api-v2.nextcounts.com/api/discord/server/pGBrnWCdyZ";
+    const inviteCode = "EK9hXEqDK5";
+    const url = `https://discord.com/api/v10/invites/${inviteCode}?with_counts=true`;
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-        document.getElementById("membersCount").textContent = data.membersCount || "N/A";
+        document.getElementById("membersCount").textContent = data.approximate_member_count || "N/A";
     } catch (error) {
         console.error('Error fetching member count:', error);
         document.getElementById("membersCount").textContent = "Error fetching data";
@@ -41,3 +42,4 @@ async function get_member_count() {
 document.addEventListener("DOMContentLoaded", async function () {
     await Promise.all([get_subscriber_count(), get_member_count()]);
 });
+
