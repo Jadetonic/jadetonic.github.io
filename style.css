@@ -161,7 +161,7 @@ body {
   transition: transform 0.5s ease, background-color 0.25s ease-out;
 }
 
-.icon.a { background-image: url(./bluesky.png); }
+.icon.a { background-image: url(./twitter.png); }
 .icon.b { background-image: url(./twitch.png); }
 .icon.c { background-image: url(./youtube.png); }
 .icon.d { background-image: url(./discord.png); }
@@ -199,3 +199,4 @@ body {
     transform: scale(1.1) rotate(360deg);
   }
 }
+
